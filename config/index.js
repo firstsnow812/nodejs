@@ -1,0 +1,1 @@
+const dotenv = require('dotenv').config(); // .env에 세팅한 설정을 사용하기 위해
