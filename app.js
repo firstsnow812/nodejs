@@ -19,11 +19,11 @@ async function startServer() {
 
 // http://localhost:3000/status
 app.get('/status', (req, res) => {
-    res.status(200).send("ssHello");
+    res.status(200).send("ssHelloss");
 });
 
 // api의 test함수 실행
-app.get("/test/", api.test);
+app.get("/test", api.test);
 
 
 

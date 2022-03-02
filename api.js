@@ -1,10 +1,18 @@
 'use strict';
-const model = require('./model');
+const axios = require("axios");
+const cheerio = require("cheerio");
+const Logic = require('./logic');
 
 // 이걸로 호출이 됨
 exports.test = async (req, res) => {
-    const result = await model.test();
+    const logic = new Logic();
+    const html = await logic.getHTML();
+    const result = await logic.parsing(html.data);
+    console.log(result);
 
-    res.send(result);
-    console.log("test");
+
+
+
+
+    res.json(result);
 };
